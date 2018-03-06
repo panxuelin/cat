@@ -9,4 +9,6 @@ module.exports = app => {
     router.get('/news', controller.news.list);
     router.get('/user/index', controller.user.info);
     router.get('/user/register', controller.user.register);
+    router.get('/user/register_async', controller.user.register_async);
+
 };

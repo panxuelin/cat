@@ -8,6 +8,12 @@ class UserService extends Service{
         const result=await this.app.mysql.insert('cat_user',{name:name,age:age,openId:openId,creatTime:new Date(),latestLoginTime:new Date()});
         console.log(result);
         console.log(result.affectedRows === 1);
+        if(result.affectedRows === 1){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }
 module.exports=UserService;

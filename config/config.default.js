@@ -27,47 +27,54 @@ module.exports = appInfo => {
         ]
     }
 
-    config.mysql = {
-        //单数据源
-        client: {
-            host: 'localhost',
-            port: '3306',
-            user: 'test_user',
-            password: 'test_password',
-            database: 'mysql'
-        },
-        /*多数据源*/
-        /*
-         clients: {
-                    db1:{
-                        host:'mysql.com',
-                        port:'3306',
-                        user:'test_user',
-                        password:'test_password',
-                        database:'test',
-                    },
-                    db2:{
-                        host:'mysql2.com',
-                        port:'3307',
-                        user:'test_user',
-                        password:'test_password',
-                        database:'test',
-                    }
-                },
-                // 所有数据库配置的默认值
-                default: {
-
-                },
-                */
-
-        app: true,
-        agent: false
-    }
+    // config.mysql = {
+    //     //单数据源
+    //     client: {
+    //         host: 'localhost',
+    //         port: '3306',
+    //         user: 'test_user',
+    //         password: 'test_password',
+    //         database: 'mysql'
+    //     },
+    //     /*多数据源*/
+    //     /*
+    //      clients: {
+    //                 db1:{
+    //                     host:'mysql.com',
+    //                     port:'3306',
+    //                     user:'test_user',
+    //                     password:'test_password',
+    //                     database:'test',
+    //                 },
+    //                 db2:{
+    //                     host:'mysql2.com',
+    //                     port:'3307',
+    //                     user:'test_user',
+    //                     password:'test_password',
+    //                     database:'test',
+    //                 }
+    //             },
+    //             // 所有数据库配置的默认值
+    //             default: {
+    //
+    //             },
+    //             */
+    //
+    //     app: true,
+    //     agent: false
+    // }
 
     config.security={
         csrf:{
             enable:false,
             headerName:'x-csrf-token'// 通过 header 传递 CSRF token 的默认字段为 x-csrf-token
+        }
+    }
+
+    config.cluster={
+        listen:{
+            port:7002,
+            hostname:'www.panxuelin.com'
         }
     }
 

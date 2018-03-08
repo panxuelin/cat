@@ -71,12 +71,12 @@ module.exports = appInfo => {
         }
     }
 
-    config.cluster={
-        listen:{
-            port:7002,
-            hostname:'www.panxuelin.com'
-        }
-    }
+    // config.cluster={
+    //     listen:{
+    //         port:7002,
+    //         hostname:'www.panxuelin.com'
+    //     }
+    // }
 
 
     return config;
